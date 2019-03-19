@@ -17,7 +17,7 @@ namespace TestNinja.UnitTests
         }
 
         [Test]
-        [TestCase(2,1,2)]
+        [TestCase(2, 1, 2)]
         [TestCase(1, 2, 2)]
         [TestCase(1, 1, 1)]
         public void Max_WhenCalled_ReturnTheGeatherArgument(int a, int b, int expectedResult)
@@ -55,6 +55,25 @@ namespace TestNinja.UnitTests
         //    var result = _math.Max(1, 1);
         //    Assert.That(result, Is.EqualTo(1));
         //}
+
+        #endregion
+
+        #region Testing Arrays and Collections
+
+        [Test]
+        public void GetOddNumbers_LimitIsGreaterThanZero_ReturnOddNumbersUpToLimit()
+        {
+            var result = _math.GetOddNumbers(5);
+
+            //Assert.That(result, Does.Contain(1));
+            //Assert.That(result, Does.Contain(3));
+            //Assert.That(result, Does.Contain(5));
+
+            Assert.That(result, Is.EquivalentTo(new[] { 1, 3, 5 }));
+
+            //Assert.That(result, Is.Ordered);
+            //Assert.That(result, Is.Unique);
+        }
 
         #endregion
     }
